@@ -1,0 +1,7 @@
+{
+    "host": "formbuilder.c8vlh6irz6zo.us-east-2.rds.amazonaws.com",
+    "user": "admin",
+    "password": "Marrvel#22s",
+    "database": "pipeline",
+    "connectionLimit": 10
+  }

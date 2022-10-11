@@ -1,0 +1,64 @@
+
+.my-drop-zone { border: dotted 3px lightgray; height: 100px;}
+.nv-file-over { border: dotted 3px red; height: 100px;} /* Default class applied to drop zones on over */
+.another-file-over-class { border: dotted 3px green; height: 100px;}
+
+html,
+body {
+  height: 100%;
+}
+
+mat-card {
+  align-items: center;
+  align-content: space-around;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  margin-bottom: 2px;
+}
+
+.container {
+  background-color: #3d3d3d;
+  height: 88.8%;
+}
+
+.cardContent {
+  position: absolute;
+  justify-content: center;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.scroll-div{
+  max-height: 50vh; 
+  overflow-y: scroll;
+}
+
+.fix-height{
+height: 62vh; 
+overflow-y: scroll;
+}
+
+.fix-result-height{
+height: 49vh; 
+overflow-y: scroll;
+}

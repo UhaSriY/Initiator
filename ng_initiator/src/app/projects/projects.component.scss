@@ -1,0 +1,21 @@
+.toolbar {
+    // position: relative;
+    top:60px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    // background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    background-color: #f0f0f080; 
+    position:sticky;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }

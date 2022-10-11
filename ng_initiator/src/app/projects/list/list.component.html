@@ -1,0 +1,70 @@
+<div class="container-fluid body" style="background-color: c3dbe3; height: 100vh;">
+    <div class="row pt-3" *ngIf="listOfProjects.length>0" style="display:none;">
+        <div class="col-12">
+            <mat-accordion class="accordion-headers-align" multi *ngFor="let project of listOfProjects;">
+                <mat-expansion-panel class="my-1">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <mat-icon style="color: rgb(92, 216, 92);" class="mx-2" matTooltip="Running.(checked at 8:00AM CST) ">check_circle</mat-icon>{{project.name | titlecase}}
+                    </mat-panel-title>
+                    <mat-panel-description>
+                       
+                      <!-- Type your name and age -->
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <div>
+                    list of apps and status
+                </div>
+                </mat-expansion-panel>
+                
+              </mat-accordion>
+              <mat-accordion class="accordion-headers-align" (click)="openCreateDialog()">
+                <mat-expansion-panel class="my-1">
+                    <mat-expansion-panel-header><span> Click to add new project</span></mat-expansion-panel-header>
+                </mat-expansion-panel>
+                 
+              </mat-accordion>
+
+        </div>
+    </div>
+
+    <div class="row pt-3" *ngIf="listOfProjects.length>0" >
+      <div class="col-12">
+        <mat-tab-group class="bg-white rounded" style="height: 85vh; z-index: -99;">
+          <mat-tab *ngFor="let project of listOfProjects;">
+            <ng-template mat-tab-label class="border border-danger round ">
+              <mat-icon style="color: rgb(40, 134, 40);" class="mx-2" matTooltip="Running.(checked at 8:00AM CST) ">check_circle</mat-icon>
+              {{project.name | titlecase}}
+            </ng-template>
+
+            <button mat-raised-button (click)="createEnv(project.project_id)"> Create environment </button>
+          </mat-tab>
+
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <mat-icon style="color: rgb(135, 221, 135);" class="mx-2" matTooltip="Create a new study">shopping_cart</mat-icon>
+            </ng-template>
+            Content 1
+          </mat-tab>
+
+        </mat-tab-group>
+      </div>
+    </div>
+    <!-- <div class="">
+        <button mat-button (click)="accordion.openAll()">Expand All</button>
+        <button mat-button (click)="accordion.closeAll()">Collapse All</button>
+      </div> -->
+
+
+    <div style="height: 20vh;" *ngIf="listOfProjects.length==0"></div>
+
+    <div class="row d-flex justify-content-center" *ngIf="listOfProjects.length==0">
+        <!-- <div class="col-2"></div> -->
+        <div class="col-8 border rounded  d-flex justify-content-center create-study">
+           <span style="display: flex; align-items: center; "> <h2 (click)="openCreateDialog()" class="create-project">Create a new study </h2><br><mat-icon class="px-3">shopping_cart</mat-icon></span>
+        </div>
+        <!-- <div class="col-2"></div> -->
+    </div>
+
+
+</div>
